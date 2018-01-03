@@ -2,102 +2,22 @@
       <!-- 电影列表开始-->
         <div class="list">
             <ul>
-                <li>
+                <li ng-repeat="items in theatersList">
                     <a href="#/details">
-                        <img src="assets/img/aizaishenqiu.jpg" alt="">
+                        <img my-error="./assets/img/large_67.jpg"  ng-src="assets/img/{{items.images.large}}" alt="">
                     </a>
                     <div class="meta">
-                        <h4><span>爱在深秋</span> <em>9.9分</em></h4>
-                        <div class="otherinfo">类型:<span>爱情</span></div>
+                        <h4><span>{{items.title}}</span> <em>{{items.rating.average}}</em></h4>
+                        <div class="otherinfo">类型:<span>{{items.genres.join('、')}}</span></div>
                     </div>
                 </li>
-                <li>
-                    <a href="#/details">
-                        <img src="assets/img/aizaishenqiu.jpg" alt="">
-                    </a>
-                    <div class="meta">
-                        <h4><span>爱在深秋</span> <em>9.9分</em></h4>
-                        <div class="otherinfo">类型:<span>爱情</span></div>
-                    </div>
-                </li>
-                <li>
-                    <a href="#/details">
-                        <img src="assets/img/aizaishenqiu.jpg" alt="">
-                    </a>
-                    <div class="meta">
-                        <h4><span>爱在深秋</span> <em>9.9分</em></h4>
-                        <div class="otherinfo">类型:<span>爱情</span></div>
-                    </div>
-                </li>
-                <li>
-                    <a href="#/details">
-                        <img src="assets/img/aizaishenqiu.jpg" alt="">
-                    </a>
-                    <div class="meta">
-                        <h4><span>爱在深秋</span> <em>9.9分</em></h4>
-                        <div class="otherinfo">类型:<span>爱情</span></div>
-                    </div>
-                </li>
-                <li>
-                    <a href="#/details">
-                        <img src="assets/img/aizaishenqiu.jpg" alt="">
-                    </a>
-                    <div class="meta">
-                        <h4><span>爱在深秋</span> <em>9.9分</em></h4>
-                        <div class="otherinfo">类型:<span>爱情</span></div>
-                    </div>
-                </li>
-                <li>
-                    <a href="#/details">
-                        <img src="assets/img/diwubo.jpg" alt="">
-                    </a>
-                    <div class="meta">
-                        <h4><span>爱在深秋</span> <em>9.9分</em></h4>
-                        <div class="otherinfo">类型:<span>爱情</span></div>
-                    </div>
-                </li>
-                <li>
-                    <a href="#/details">
-                        <img src="assets/img/diwubo.jpg" alt="">
-                    </a>
-                    <div class="meta">
-                        <h4><span>爱在深秋</span> <em>9.9分</em></h4>
-                        <div class="otherinfo">类型:<span>爱情</span></div>
-                    </div>
-                </li>
-                <li>
-                    <a href="#/details">
-                        <img src="assets/img/diwubo.jpg" alt="">
-                    </a>
-                    <div class="meta">
-                        <h4><span>爱在深秋</span> <em>9.9分</em></h4>
-                        <div class="otherinfo">类型:<span>爱情</span></div>
-                    </div>
-                </li>
-                <li>
-                    <a href="#/details">
-                        <img src="assets/img/diwubo.jpg" alt="">
-                    </a>
-                    <div class="meta">
-                        <h4><span>爱在深秋</span> <em>9.9分</em></h4>
-                        <div class="otherinfo">类型:<span>爱情</span></div>
-                    </div>
-                </li>
-                <li>
-                    <a href="#/details">
-                        <img src="assets/img/diwubo.jpg" alt="">
-                    </a>
-                    <div class="meta">
-                        <h4><span>爱在深秋</span> <em>9.9分</em></h4>
-                        <div class="otherinfo">类型:<span>爱情</span></div>
-                    </div>
-                </li>
+                
             </ul>
             <div class="paging">
                 <label>总共：0条记录,第0/0页;</label>
                 <!-- 加上disable类样式，表示按钮禁用状态 -->
-                <button class="prev disable ">上一页</button>
-                <button class="next">下一页</button>
+                <button  ng-class="{disable:abc==1 ,prev:true} " ng-click="getPage(-1)">上一页</button>
+                <button class="next" ng-click="getPage(1)">下一页</button>
             </div>
         </div>
         <!--电影列表结束 -->
