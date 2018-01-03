@@ -1,0 +1,20 @@
+{
+  "name": "privatefilms",
+  "version": "1.0.0",
+  "description": "- 请求地址: http://localhost:3000/coming_soon\r - 请求类型: GET\r - 请求参数: 无",
+  "main": "index.js",
+  "scripts": {
+    "reset": "node reset.js",
+    "dev": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {},
+  "dependencies": {
+    "angular": "^1.6.8",
+    "angular-ui-router": "^1.0.3",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4"
+  }
+}
