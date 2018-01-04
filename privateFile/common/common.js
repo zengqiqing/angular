@@ -7,12 +7,12 @@ common.directive('myError',function(){
 // $scope:angular里面的一些内置的属性
 // element：元素的包装集
     link:function($scope,element,attribute){
-      console.log($scope);
-      console.log('11111');
-      console.log(element);
-      console.log('11111');
+      // console.log($scope);
+      // console.log('11111');
+      // console.log(element);
+      // console.log('11111');
       
-      console.log(attribute);
+      // console.log(attribute);
       
       // element:包装集
       // 图片加载的两个事件：load成功，error失败
